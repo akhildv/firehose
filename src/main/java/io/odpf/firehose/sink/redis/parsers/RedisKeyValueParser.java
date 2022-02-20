@@ -26,7 +26,7 @@ public class RedisKeyValueParser extends RedisParser {
     public List<RedisDataEntry> parse(Message message) {
         DynamicMessage parsedMessage = parseEsbMessage(message);
         String redisKey = parseTemplate(parsedMessage, redisSinkConfig.getSinkRedisKeyTemplate());
-        String protoIndex = redisSinkConfig.getSinkRedisKeyValuetDataProtoIndex();
+        String protoIndex = redisSinkConfig.getSinkRedisKeyValueDataProtoIndex();
         if (protoIndex == null) {
             throw new IllegalArgumentException("Please provide SINK_REDIS_KEY_VALUE_DATA_PROTO_INDEX in key value sink");
         }

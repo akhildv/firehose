@@ -23,7 +23,7 @@ public interface RedisSinkConfig extends AppConfig {
     String getSinkRedisListDataProtoIndex();
 
     @Key("SINK_REDIS_KEY_VALUE_DATA_PROTO_INDEX")
-    String getSinkRedisKeyValuetDataProtoIndex();
+    String getSinkRedisKeyValueDataProtoIndex();
 
     @Key("SINK_REDIS_TTL_TYPE")
     @DefaultValue("DISABLE")
@@ -38,6 +38,4 @@ public interface RedisSinkConfig extends AppConfig {
     @DefaultValue("Standalone")
     @ConverterClass(RedisSinkDeploymentTypeConverter.class)
     RedisSinkDeploymentType getSinkRedisDeploymentType();
-
-
 }
